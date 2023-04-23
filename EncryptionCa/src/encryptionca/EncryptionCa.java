@@ -112,13 +112,13 @@ public class EncryptionCa {
 
     private static byte[] hexToBytes(String hex) {
         byte[] bytes = new byte[hex.length() / 2];
-        for (int i = 0; i < bytes.length; i++) {
-            bytes[i] = (byte) Integer.parseInt(hex.substring(2 * i, 2 *
-
-
-
-                    }
+         for (int i = 0; i < bytes.length; i++) {
+        int index = i * 2;
+        int j = Integer.parseInt(hex.substring(index, index + 2), 16);
+        bytes[i] = (byte) j;
     }
+    return bytes;
+}
 }
 /**used https://www.baeldung.com/java-cipher-input-output-stream and 
 https://www.codejava.net/coding/file-encryption-and-decryption-simple-example to help**/
