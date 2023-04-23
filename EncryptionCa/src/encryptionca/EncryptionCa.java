@@ -117,7 +117,9 @@ public class EncryptionCa {
 
 
 
-
+                    }
+    }
+}
 /**used https://www.baeldung.com/java-cipher-input-output-stream and 
 https://www.codejava.net/coding/file-encryption-and-decryption-simple-example to help**/
 
